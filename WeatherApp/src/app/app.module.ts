@@ -13,6 +13,7 @@ import { WeatherTableComponent } from './components/weather-table/weather-table.
 import { WeatherChartComponent } from './components/weather-chart/weather-chart.component';
 import { WeatherCalculatorComponent } from './components/weather-calculator/weather-calculator.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     TabViewModule,
     HttpClientModule,
+    TableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
