@@ -1,6 +1,30 @@
 <p-tabView>
+  <!-- test view of London weather -->
+  <p-tabPanel header="Test View">
+    <div class="weather-container">
+      <h1>Weather Information</h1>
+      <div *ngIf="weatherData">
+        <h2>Location: New York City</h2>
+        <p>
+          <strong>Current Temperature:</strong>
+          {{ weatherData.hourly.temperature_2m[0] }} °C
+        </p>
+        <p>
+          <strong>Daily Max Temperature:</strong>
+          {{ weatherData.daily.temperature_2m_max[0] }} °C
+        </p>
+        <p>
+          <strong>Daily Min Temperature:</strong>
+          {{ weatherData.daily.temperature_2m_min[0] }} °C
+        </p>
+      </div>
+      <div *ngIf="!weatherData">
+        <p>Loading weather data...</p>
+      </div>
+    </div>
+  </p-tabPanel>
   <p-tabPanel header="Table">
-    <app-weather-table></app-weather-table>
+    <app-weather-table [weatherData]="weatherData"></app-weather-table>
   </p-tabPanel>
   <p-tabPanel header="Line Chart">
     <app-weather-chart></app-weather-chart>

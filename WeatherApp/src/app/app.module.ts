@@ -12,15 +12,25 @@ import { TabViewModule } from 'primeng/tabview';
 import { WeatherTableComponent } from './components/weather-table/weather-table.component';
 import { WeatherChartComponent } from './components/weather-chart/weather-chart.component';
 import { WeatherCalculatorComponent } from './components/weather-calculator/weather-calculator.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, WeatherTableComponent, WeatherChartComponent, WeatherCalculatorComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    WeatherTableComponent,
+    WeatherChartComponent,
+    WeatherCalculatorComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
     FormsModule,
     TabViewModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

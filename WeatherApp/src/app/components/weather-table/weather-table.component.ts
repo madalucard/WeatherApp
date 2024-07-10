@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-weather-table',
   templateUrl: './weather-table.component.html',
-  styleUrl: './weather-table.component.scss'
+  styleUrl: './weather-table.component.scss',
 })
 export class WeatherTableComponent {
-
+  @Input() weatherData: any;
 }
