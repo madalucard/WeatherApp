@@ -2,11 +2,13 @@
 <p-table
   [columns]="cols"
   [value]="sortedData"
-  [tableStyle]="{ 'min-width': '50rem' }"
+  [tableStyle]="{ 'min-width': '50rem', height: '100%' }"
+  [scrollable]="true"
+  scrollHeight="700px"
 >
   <ng-template pTemplate="header" let-columns>
     <tr>
-      <th *ngFor="let col of columns">
+      <th *ngFor="let col of columns" pSortableColumn>
         {{ col.header }}
       </th>
     </tr>

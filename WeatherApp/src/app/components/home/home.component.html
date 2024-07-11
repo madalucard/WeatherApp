@@ -1,4 +1,4 @@
-<p-tabView>
+<p-tabView class="column table-container">
   <!-- test view of London weather -->
   <!-- <p-tabPanel header="Test View">
     <div class="weather-container">
@@ -27,7 +27,7 @@
     <app-weather-table [tableData]="tableData"></app-weather-table>
   </p-tabPanel>
   <p-tabPanel header="Line Chart">
-    <app-weather-chart></app-weather-chart>
+    <app-weather-chart [chartData]="tableData"></app-weather-chart>
   </p-tabPanel>
   <p-tabPanel header="Heat Index Calculator">
     <app-weather-calculator></app-weather-calculator>
