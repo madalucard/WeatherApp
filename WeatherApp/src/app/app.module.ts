@@ -8,12 +8,13 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { TabViewModule } from 'primeng/tabview';
 import { WeatherTableComponent } from './components/weather-table/weather-table.component';
 import { WeatherChartComponent } from './components/weather-chart/weather-chart.component';
 import { WeatherCalculatorComponent } from './components/weather-calculator/weather-calculator.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TabViewModule } from 'primeng/tabview';
 import { TableModule } from 'primeng/table';
+import { ChartModule } from 'primeng/chart';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { TableModule } from 'primeng/table';
     TabViewModule,
     HttpClientModule,
     TableModule,
+    ChartModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
