@@ -23,13 +23,13 @@
       </div>
     </div>
   </p-tabPanel> -->
-  <p-tabPanel header="Heat Index Calculator">
-    <app-weather-calculator></app-weather-calculator>
+  <p-tabPanel header="Table">
+    <app-weather-table [tableData]="sortedData"></app-weather-table>
   </p-tabPanel>
   <p-tabPanel header="Line Chart">
     <app-weather-chart [chartData]="sortedData"></app-weather-chart>
   </p-tabPanel>
-  <p-tabPanel header="Table">
-    <app-weather-table [tableData]="sortedData"></app-weather-table>
+  <p-tabPanel header="Heat Index Calculator">
+    <app-weather-calculator></app-weather-calculator>
   </p-tabPanel>
 </p-tabView>
