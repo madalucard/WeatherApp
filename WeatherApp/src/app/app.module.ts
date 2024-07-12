@@ -20,6 +20,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { ButtonModule } from 'primeng/button';
 import { DateformatPipe } from './pipelines/dateformat.pipe';
+import { WeatherStatePipe } from './pipelines/weather-state.pipe';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { DateformatPipe } from './pipelines/dateformat.pipe';
     WeatherChartComponent,
     WeatherCalculatorComponent,
     DateformatPipe,
+    WeatherStatePipe,
   ],
   imports: [
     BrowserModule,

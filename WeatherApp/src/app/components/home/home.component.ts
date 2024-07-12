@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { DateformatPipe } from '../../pipelines/dateformat.pipe';
+import { WeatherStatePipe } from '../../pipelines/weather-state.pipe';
 
 interface TableContent {
   dateTime: string;
@@ -21,7 +22,7 @@ export class HomeComponent {
   public testViewData: any;
   public sortedData: TableContent[] = [];
   public dateFormatPipe = new DateformatPipe();
-
+  public weatherStatePipe = new WeatherStatePipe();
   dates: string[] = [];
   weatherState: string[] = [];
   temperature: string[] = [];
@@ -75,7 +76,7 @@ export class HomeComponent {
 
     this.sortedData = this.dates.map((date, index) => ({
       dateTime: this.dateFormatPipe.transform(date),
-      weatherState: this.weatherState[index],
+      weatherState: this.weatherStatePipe.transform(this.weatherState[index]),
       temperature: this.temperature[index],
       surfacePresure: this.surfacePresure[index],
       relativeHumidity: this.relativeHumidity[index],
