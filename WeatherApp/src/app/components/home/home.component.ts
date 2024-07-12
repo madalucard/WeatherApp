@@ -29,14 +29,14 @@ export class HomeComponent {
   surfacePresure: string[] = [];
   relativeHumidity: string[] = [];
 
-  // defualt london
+  // defualt london gps
   private latitude = 49.3777;
   private longitude = -18.8675;
 
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
-    // this.testGetWeather();
+    this.testGetWeather();
     this.getTableData();
   }
 
@@ -44,7 +44,7 @@ export class HomeComponent {
     this.apiService.testGetWeather(this.latitude, this.longitude).subscribe(
       (data) => {
         this.testViewData = data;
-        console.log(data);
+        console.log('Test Weather Data:', data);
       },
       (error) => console.error('Error fetching weather data')
     );

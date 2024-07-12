@@ -1,10 +1,10 @@
-<p-tabView class="column table-container">
+<p-tabView class="column custom-table">
   <!-- test view of London weather -->
-  <!-- <p-tabPanel header="Test View">
+  <p-tabPanel header="Home" class="">
     <div class="weather-container">
       <h1>Weather Information</h1>
       <div *ngIf="testViewData">
-        <h2>Location: New York City</h2>
+        <h2>Location: London</h2>
         <p>
           <strong>Current Temperature:</strong>
           {{ testViewData.hourly.temperature_2m[0] }} °C
@@ -22,7 +22,7 @@
         <p>Loading weather data...</p>
       </div>
     </div>
-  </p-tabPanel> -->
+  </p-tabPanel>
   <p-tabPanel header="Table">
     <app-weather-table [tableData]="sortedData"></app-weather-table>
   </p-tabPanel>

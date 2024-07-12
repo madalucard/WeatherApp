@@ -32,10 +32,6 @@ export class WeatherChartComponent {
       this.datetimesss.push(e.dateTime);
       this.temperaturesss.push(e.temperature);
     });
-
-    console.log('datetimes: :', this.datetimesss);
-
-    console.log('temperaturesss: :', this.temperaturesss);
     this.data = {
       labels: this.datetimesss,
       datasets: [

@@ -1,25 +1,27 @@
-<div class="column">
-  <div>
-    <label for="tempField">Select temperature</label>
-    <p-inputNumber
-      [(ngModel)]="tempInput"
-      inputId="tempField"
-      mode="decimal"
-      [min]="26.8"
-      [max]="200"
-    />
+<div class="column align-center">
+  <div class="column input-container">
+    <div class="row align-center">
+      <label for="tempField">Select temperature: </label>
+      <p-inputNumber
+        [(ngModel)]="tempInput"
+        inputId="tempField"
+        mode="decimal"
+        [min]="26.8"
+        [max]="200"
+      />
+    </div>
+    <div class="row align-center">
+      <label for="humField">Select humidity: </label>
+      <p-inputNumber
+        [(ngModel)]="humidityInput"
+        inputId="humField"
+        mode="decimal"
+        [min]="0"
+        [max]="100"
+      />
+    </div>
   </div>
-  <div>
-    <label for="humField">Select humidity</label>
-    <p-inputNumber
-      [(ngModel)]="humidityInput"
-      inputId="humField"
-      mode="decimal"
-      [min]="0"
-      [max]="100"
-    />
-  </div>
-  <div class="row align-center">
+  <div class="column align-center">
     <label>Select humidity</label>
     <div class="column">
       <div>
@@ -45,6 +47,6 @@
 
   <div class="row align-center">
     <p-button label="Calculate" (onClick)="calculateHeatIndex()" />
-    <h2>Reuslt: {{ result }}</h2>
   </div>
+  <h1>Reuslt: {{ result | number : "1.2-2" }}</h1>
 </div>
