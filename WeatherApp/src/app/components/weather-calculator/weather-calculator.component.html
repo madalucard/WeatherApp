@@ -1,1 +1,50 @@
-<p>weather-calculator works!</p>
+<div class="column">
+  <div>
+    <label for="tempField">Select temperature</label>
+    <p-inputNumber
+      [(ngModel)]="tempInput"
+      inputId="tempField"
+      mode="decimal"
+      [min]="26.8"
+      [max]="200"
+    />
+  </div>
+  <div>
+    <label for="humField">Select humidity</label>
+    <p-inputNumber
+      [(ngModel)]="humidityInput"
+      inputId="humField"
+      mode="decimal"
+      [min]="0"
+      [max]="100"
+    />
+  </div>
+  <div class="row align-center">
+    <label>Select humidity</label>
+    <div class="column">
+      <div>
+        <p-radioButton
+          name="temperature"
+          value="true"
+          [(ngModel)]="isCelsius"
+          inputId="cels"
+        />
+        <label for="cels"> Celsius </label>
+      </div>
+      <div>
+        <p-radioButton
+          name="temperature"
+          value="false"
+          [(ngModel)]="isCelsius"
+          inputId="farh"
+        />
+        <label for="farh"> Farenheit </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row align-center">
+    <p-button label="Calculate" (onClick)="calculateHeatIndex()" />
+    <h2>Reuslt: {{ result }}</h2>
+  </div>
+</div>

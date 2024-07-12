@@ -15,6 +15,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { TabViewModule } from 'primeng/tabview';
 import { TableModule } from 'primeng/table';
 import { ChartModule } from 'primeng/chart';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -35,6 +39,10 @@ import { ChartModule } from 'primeng/chart';
     HttpClientModule,
     TableModule,
     ChartModule,
+    InputTextareaModule,
+    InputNumberModule,
+    RadioButtonModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
