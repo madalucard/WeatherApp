@@ -5,10 +5,14 @@
   [scrollable]="true"
   scrollHeight="700px"
 >
-  <ng-template pTemplate="header" let-columns>
+  <ng-template pTemplate="header">
     <tr>
-      <th *ngFor="let col of columns" pSortableColumn>
-        {{ col.header }}
+      <th
+        *ngFor="let col of cols"
+        pSortableColumn="{{ col.field }}"
+        [ngStyle]="{ width: '20%' }"
+      >
+        {{ col.header }} <p-sortIcon field="{{ col.field }}" />
       </th>
     </tr>
   </ng-template>
