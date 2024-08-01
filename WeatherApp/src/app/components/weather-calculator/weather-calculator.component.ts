@@ -42,7 +42,11 @@ export class WeatherCalculatorComponent {
 
     const heatIndexC = this.convertTemperature(false, heatIndexF);
 
-    return (this.result = heatIndexC);
+    if (this.isCelsius) {
+      this.result = heatIndexC;
+    } else {
+      this.result = heatIndexF;
+    }
   }
 
   convertTemperature(isCelsius: boolean, temperature: number): number {
